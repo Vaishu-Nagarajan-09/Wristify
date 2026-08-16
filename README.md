@@ -41,7 +41,7 @@ A MERN Stack e-commerce watch website built as a 7-day development challenge.
 - Wristify Journal
 - Footer
 
- ### Day 2 - Complete Cart and Wishlist Functionality
+ ### Day 3 - Complete Cart and Wishlist Functionality
  - Collections page navigation
  - Dynamic product rendering
  - ProductCard improvements
