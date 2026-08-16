@@ -7,6 +7,7 @@ A MERN Stack e-commerce watch website built as a 7-day development challenge.
 | Day | Focus | Status |
 |-----|-------|--------|
 | Day 1 | Project Setup & Architecture | Done |
+| Day 2 | Complete HomePage UI | Done |
 
 ## 🛠️ Tech Stack
 
@@ -29,3 +30,12 @@ A MERN Stack e-commerce watch website built as a 7-day development challenge.
 - Installed dependencies
 - Set up Git
 - Initial project pushed to GitHub
+
+### Day 2 - Complete homepage UI
+- Navbar
+- Hero
+- ProductOverview
+- Video Promo
+- Customer Review
+- Wristify Journal
+- Footer
