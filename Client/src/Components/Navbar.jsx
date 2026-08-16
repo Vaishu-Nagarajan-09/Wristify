@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { WishlistContext } from "../context/WishlistContext";
+import { CartContext } from "../context/CartContext";
 
 const Navbar = () => {
+
+    const {wishlist} = useContext(WishlistContext);
+
+    const{cart} = useContext(CartContext);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-black px-4">
@@ -16,13 +23,13 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto gap-4 main-nav">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" href="#">Home</Link>
+                <Link className="nav-link active" aria-current="page" href="/">Home</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="#">Collections</Link>
+                <Link to="/collections" className="nav-link" href="/collections">Collections</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="#">Contact</Link>
+                <Link className="nav-link" href="/contact">Contact</Link>
               </li>
             </ul>
 
@@ -30,11 +37,13 @@ const Navbar = () => {
               <li className="nav-item">
                 <i className="bi bi-search nav-icon"></i>
               </li>
-              <li className="nav-item">
-                <Link to="/"><i className="bi bi-heart-fill nav-icon"></i></Link>
+              <li className="nav-item"> 
+                <Link to="/wishlist"><i className="bi bi-heart-fill nav-icon"></i></Link>
+                {/* <span className="text-white">({wishlist.length})</span> */}
               </li>
               <li className="nav-item">
-                <Link to="/wishlist"><i className="bi bi-cart-fill nav-icon"></i></Link>
+                <Link to="/cart"><i className="bi bi-cart-fill nav-icon"></i></Link>
+                <span className="text-white">({cart.length})</span>
               </li>
               <li className="nav-item ms-4">
                 <Link to="/login" className="btn">Sign In</Link>
