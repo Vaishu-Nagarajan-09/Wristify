@@ -8,7 +8,8 @@ A MERN Stack e-commerce watch website built as a 7-day development challenge.
 |-----|-------|--------|
 | Day 1 | Project Setup & Architecture | Done |
 | Day 2 | Complete HomePage UI | Done |
-| Day 3 | Complete Cart and Wishlist Functionality | Done
+| Day 3 | Complete Cart and Wishlist Functionality | Done |
+| Day 4 | Complete Product Details and Cart Integration | Done |
 
 ## 🛠️ Tech Stack
 
@@ -57,3 +58,22 @@ A MERN Stack e-commerce watch website built as a 7-day development challenge.
  - Cart total calculation
  - Order Summary
  - Shared Navbar across pages
+
+### Day 4 - Complete Product Details and Cart Integration 
+- Fetch products from MongoDB
+- Express /Product API
+- Seed products into MongoDB
+- Fetch individual product by ID
+- Dynamic /product/:id route
+- useParams()
+- Axios Integration
+- Product Details Page
+- Product image/details
+- Loading state
+- Error State
+- Quantity +/-
+- Prevent quantity below 1
+- prevent quantity above stock
+- Add to cart from Product details
+- Existing CartContext integration
+- Back to Collections
