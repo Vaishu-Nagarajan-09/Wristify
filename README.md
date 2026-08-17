@@ -61,7 +61,7 @@ A MERN Stack e-commerce watch website built as a 7-day development challenge.
 
 ### Day 4 - Complete Product Details and Cart Integration 
 - Fetch products from MongoDB
-- Express /Product API
+- Express /product API
 - Seed products into MongoDB
 - Fetch individual product by ID
 - Dynamic /product/:id route
@@ -75,5 +75,5 @@ A MERN Stack e-commerce watch website built as a 7-day development challenge.
 - Prevent quantity below 1
 - prevent quantity above stock
 - Add to cart from Product details
-- Existing CartContext integration
+- Existing CartContext Integration
 - Back to Collections
