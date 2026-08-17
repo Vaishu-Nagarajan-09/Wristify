@@ -1,14 +1,11 @@
-import watch11 from '../public/images/watch-img 12.jpg'
-
 const products = [
     {
         id: 1,
         name: "Wristify Latest Model",
         brand: "Titan",
         price: 8999,
-        quantity: 1,
         description: "Latest and premium watch",
-        image: watch11,
+        image: "/images/watch-img 12.jpg",
         stock: 10,
         rating: 4
     },
@@ -17,9 +14,8 @@ const products = [
         name: "Classic Model",
         brand: "Carlonton",
         price: 6999,
-        quantity: 1,
         description: "Latest and Premium Watch",
-        image: watch11,
+        image: "/images/watch-img 12.jpg",
         stock: 10,
         rating: 5
     },
@@ -28,9 +24,8 @@ const products = [
         name: "Wristify Latest Model",
         brand: "Titan",
         price: 8999,
-        quantity: 1,
         description: "Latest and Premium Watch",
-        image: watch11,
+        image: "/images/watch-img 12.jpg",
         stock: 10,
         rating: 5
     },
@@ -39,9 +34,8 @@ const products = [
         name: "Wristify Latest Model",
         brand: "Titan",
         price: 8999,
-        quantity: 1,
         description: "Latest and Premium Watch",
-        image: watch11,
+        image: "/images/watch-img 12.jpg",
         stock: 10,
         rating: 5
     },
@@ -50,9 +44,8 @@ const products = [
         name: "Wristify Latest Model",
         brand: "Titan",
         price: 8999,
-        quantity: 1,
         description: "Latest and Premium Watch",
-        image: watch11,
+        image: "/images/watch-img 12.jpg",
         stock: 10,
         rating: 5
     },
@@ -61,9 +54,8 @@ const products = [
         name: "Wristify Latest Model",
         brand: "Titan",
         price: 8999,
-        quantity: 1,
         description: "Latest and Premium Watch",
-        image: watch11,
+        image: "/images/watch-img 12.jpg",
         stock: 10,
         rating: 5
     },
@@ -72,9 +64,8 @@ const products = [
         name: "Wristify Latest Model",
         brand: "Titan",
         price: 8999,
-        quantity: 1,
         description: "Latest and Premium Watch",
-        image: watch11,
+        image: "/images/watch-img 12.jpg",
         stock: 10,
         rating: 5
     },
@@ -83,9 +74,8 @@ const products = [
         name: "Wristify Latest Model",
         brand: "Titan",
         price: 8999,
-        quantity: 1,
         description: "Latest and Premium Watch",
-        image: watch11,
+        image: "/images/watch-img 12.jpg",
         stock: 10,
         rating: 5
     },
@@ -94,9 +84,8 @@ const products = [
         name: "Wristify Latest Model",
         brand: "Titan",
         price: 8999,
-        quantity: 1,
         description: "Latest and Premium Watch",
-        image: watch11,
+        image: "/images/watch-img 12.jpg",
         stock: 10,
         rating: 5
     },
@@ -105,9 +94,8 @@ const products = [
         name: "Wristify Latest Model",
         brand: "Titan",
         price: 8999,
-        quantity: 1,
         description: "Latest and Premium Watch",
-        image: watch11,
+        image: "/images/watch-img 12.jpg",
         stock: 10,
         rating: 5,
     },
@@ -116,9 +104,8 @@ const products = [
         name: "Wristify Latest Model",
         brand: "Titan",
         price: 8999,
-        quantity: 1,
         description: "Latest and Premium Watch",
-        image: watch11,
+        image: "/images/watch-img 12.jpg",
         stock: 10,
         rating: 5
     },
@@ -127,12 +114,11 @@ const products = [
         name: "Wristify Latest Model",
         brand: "Titan",
         price: 8999,
-        quantity: 1,
         description: "Latest and Premium Watch",
-        image: watch11,
+        image: "/images/watch-img 12.jpg",
         stock: 10,
         rating: 5
     }
 ];
 
-export default products;
+module.exports = products;

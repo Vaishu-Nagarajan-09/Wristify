@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { WishlistContext } from "../context/WishlistContext";
 import { CartContext } from "../context/CartContext";
+import { Link } from 'react-router-dom'
 
 
 const ProductCard = ({ product, removeFromCart, increaseQuantity, decreaseQuantity }) => {
@@ -29,11 +30,18 @@ const ProductCard = ({ product, removeFromCart, increaseQuantity, decreaseQuanti
             <div className="card prod-card">
                 <div className="card-body">
                     <div className="prod-wrapper">
+
+                        <Link to={`/product/${product.id}`}>
                         <img src={product.image} alt={product.name} className="prod-img" />
+                        </Link>
+                        
                         <i className={`bi ${isWishlist ? "bi-heart-fill" : "bi-heart"} wishlist-icon`}
                             onClick={handleWishlist}></i>
                     </div>
+
+                    <Link to={`/product/${product.id}`}>
                     <h3>{product.name}</h3>
+                    </Link>
                     <h5>{product.brand}</h5>
                     <p className="prod-desc">{product.description}</p>
                     <h6 className="prod-price">₹ {product.price}</h6>

@@ -1,10 +1,5 @@
 import React from "react";
-import watch3 from "../assets/images/watch-img 3.jpeg";
-import watch11 from "../assets/images/watch-img 11.jpg";
-import watch15 from "../assets/images/watch-img 15.jpg";
-import watch2 from "../assets/images/watch-img 2.jpeg";
-import watch14 from "../assets/images/watch-img 14.jpg";
-import watch10 from "../assets/images/watch-img 10.jpg";
+
 
 const WristifyJournal = () => {
 
@@ -12,32 +7,32 @@ const WristifyJournal = () => {
        {
       title: "Superior Craftsmanship",
       desc: "Each Wristify watch is meticulously crafted with precision and attention to detail, reflecting the artistry of expert watchmakers.",
-      img: watch3,
+      img: "images/watch-img 3.jpeg",
     },
     {
       title: "Elegant and Timeless Design",
       desc: "Our timepieces feature clean lines, minimalistic dials, and a sophisticated aesthetic that never goes out of style.",
-      img: watch11,
+      img: "images/watch-img 11.jpg",
     },
     {
       title: "Attention to Detail",
       desc: "Every component is carefully assembled to ensure flawless performance and enduring beauty.",
-      img: watch15,
+      img: "images/watch-img 15.jpg",
     },
     {
       title: "Precision Engineering",
       desc: "Powered by high-accuracy movements, Wristify watches deliver unmatched reliability.",
-      img: watch2,
+      img: "images/watch-img 2.jpeg",
     },
     {
       title: "Built for Everyday Excellence",
       desc: "Designed to transition effortlessly from formal occasions to daily wear.",
-      img: watch14,
+      img: "images/watch-img 14.jpg",
     },
     {
       title: "Luxury That Speaks",
       desc: "A statement of confidence, ambition, and refined taste.",
-      img: watch10
+      img: "images/watch-img 10.jpg",
     },
     ]
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import watch2 from '../assets/images/watch-img 16.png';
+
 
 const ProductOverView = () => {
     return (
@@ -26,7 +26,7 @@ const ProductOverView = () => {
                         </div>
                         {/* right side */}
                         <div className="col-md-6 product-image-container">
-                            <img src={watch2} alt="watch2 img" className="product-img" />
+                            <img src="images/watch-img 16.png" alt="watch2 img" className="product-img" />
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import watch1 from '../assets/images/watch-img 1.png';
+
 
 const Hero = () => {
     return (
@@ -30,7 +30,7 @@ const Hero = () => {
                         </div>
                         {/* right side */}
                         <div className="col-md-6 hero-image-container">
-                            <img src={watch1} alt="watch1 image" className="hero-img" />
+                            <img src="images/watch-img 1.png" alt="watch1 image" className="hero-img" />
                         </div>
                     </div>
                 </div>
