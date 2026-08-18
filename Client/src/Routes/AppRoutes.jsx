@@ -1,23 +1,40 @@
 import React from "react";
-import{ Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Collections from "../pages/Collections";
 import Wishlist from "../pages/Wishlist";
 import Cart from "../pages/Cart";
 import ProductDetails from "../pages/ProductDetails";
+import Register from "../pages/Register";
+import Login from "../pages/Login";
+import ProtectedRoute from "./ProtectedRoute";
 
 
-const AppRoutes = () =>{
-    return(
-       <>
-        <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/collections" element={<Collections/>} />
-            <Route path="/wishlist" element={<Wishlist/>} />
-            <Route path="/cart" element={<Cart/>} />
-            <Route path="/product/:id" element={<ProductDetails/>} />
-        </Routes>
-       </>
+const AppRoutes = () => {
+    return (
+        <>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/collections" element={<Collections />} />
+                <Route path="/product/:id" element={<ProductDetails />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<Login />} />
+                
+                <Route path="/wishlist"
+                    element={
+                        <ProtectedRoute>
+                            <Wishlist />
+                        </ProtectedRoute>
+                    } />
+                <Route path="/cart"
+                    element={
+                        <ProtectedRoute>
+                            <Cart />
+                        </ProtectedRoute>
+                    } />
+                
+            </Routes>
+        </>
     )
 }
 
