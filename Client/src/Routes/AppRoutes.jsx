@@ -8,6 +8,8 @@ import ProductDetails from "../pages/ProductDetails";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import ProtectedRoute from "./ProtectedRoute";
+import Checkout from "../pages/Checkout";
+import MyOrders from "../pages/MyOrders";
 
 
 const AppRoutes = () => {
@@ -32,7 +34,9 @@ const AppRoutes = () => {
                             <Cart />
                         </ProtectedRoute>
                     } />
-                
+                <Route path="/cart" element={<Cart/>} />
+                <Route path="/checkout" element={<Checkout/>} /> 
+                <Route path="/my-orders" element={<MyOrders/>} />
             </Routes>
         </>
     )

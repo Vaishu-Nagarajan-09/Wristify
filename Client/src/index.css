@@ -558,3 +558,48 @@
 .proceed-btn:hover{
     background-color: #b58e3f;
 }
+
+/* register ui & login ui */
+.form-card{
+    background-color: #ebe7df;
+    width: 500px;
+    max-width: 100%;
+    margin: 30px auto;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.form-card h2{
+    text-align: center;
+}
+.form-card .form-control{
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.form-card .form-control:focus {
+    border: 1.5px solid #999;
+    outline: none;
+    box-shadow: none;
+}
+.form-card button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #c9a24d;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+.form-card button:hover{
+    background-color: #b58e3f;
+}
+.form-error{
+    color: red;
+    margin-top: 10px;
+}
+.form-success{
+    color: green;
+    margin-top: 10px;
+}

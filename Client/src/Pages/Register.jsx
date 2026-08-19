@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios';
+import { Link } from "react-router-dom";
+
 
 const Register = () => {
 
@@ -23,6 +25,8 @@ const Register = () => {
             const response = await axios.post('http://localhost:3000/user/register', formData);
             console.log(response.data)
             setSuccess(response.data.message);
+
+            alert("Registration Successfully");
         }
         catch (e) {
             console.log(e.message);
@@ -36,70 +40,67 @@ const Register = () => {
 
     return (
         <>
-            <div className="container-fluid">
-                <h2>Register</h2>
-                <div className="container">
-                    <div className="row">
-                        <div className="card">
-                            <div className="card-body">
-                                <div className="row">
+            <div className="container">
+                <h2 className="text-center mt-4">Create Account</h2>
+                <div className="form-card">
+                    <form onSubmit={handleSubmit}>
 
-                                    <form onSubmit={handleSubmit}>
-                                        <div className="col-6">
-                                            <div className="mb-3">
-                                                <label className="form-label">Name:</label>
-                                                <input type="text" id="inputFname" className="form-control"
-                                                    value={formData.name}
-                                                    onChange={(e) => {
-                                                        setFormData({
-                                                            ...formData,
-                                                            name: e.target.value
-                                                        });
-                                                    }}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="col-6">
-                                            <div className="mb-3">
-                                                <label className="form-label">Email:</label>
-                                                <input type="email" id="inputFname" className="form-control"
-                                                    value={formData.email}
-                                                    onChange={(e) => {
-                                                        setFormData({
-                                                            ...formData,
-                                                            email: e.target.value
-                                                        });
-                                                    }}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className="col-6">
-                                            <div className="mb-3">
-                                                <label className="form-label">Password:</label>
-                                                <input type="password" id="inputFname" className="form-control"
-                                                    value={formData.password}
-                                                    onChange={(e) => {
-                                                        setFormData({
-                                                            ...formData,
-                                                            password: e.target.value
-                                                        });
-                                                    }}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <button type="submit" disabled={loading}>{loading ? "Creating Account..." : "Create Account"}</button>
-                                        </div>
-                                        {error && <p>{error}</p>}
-                                        {success && <p>{success}</p>}
-                                    </form>
-                                </div>
-                            </div>
+                        <div className="mb-3">
+                            <label className="form-label"><i className="bi bi-person"></i> Name:</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                value={formData.name}
+                                onChange={(e) => {
+                                    setFormData({
+                                        ...formData,
+                                        name: e.target.value
+                                    });
+                                }} />
                         </div>
-                    </div>
+
+                        <div className="mb-3">
+                            <label className="form-label"><i className="bi bi-envelope"></i> Email:</label>
+                            <input
+                                type="email"
+                                className="form-control"
+                                value={formData.email}
+                                onChange={(e) => {
+                                    setFormData({
+                                        ...formData,
+                                        email: e.target.value
+                                    });
+                                }} />
+                        </div>
+
+                        <div className="mb-3">
+                            <label className="form-label"><i className="bi bi-lock"></i> Password:</label>
+                            <input
+                                type="password"
+                                className="form-control"
+                                value={formData.password}
+                                onChange={(e) => {
+                                    setFormData({
+                                        ...formData,
+                                        password: e.target.value
+                                    });
+                                }} />
+                        </div>
+
+                        <button type="submit" disabled={loading}>
+                            {loading ? "Creating Account..." : "Create Account"}
+                        </button>
+
+                        {error && (<p className="form-error">{error}</p>)}
+                        {success && (<p className="form-success">{success}</p>)}
+
+                        <p className="text-center mt-3">
+                            Already have an account?
+                            <Link to="/login" className="ms-3">Sign In</Link>
+                        </p>
+
+                    </form>
+
                 </div>
             </div>
         </>
