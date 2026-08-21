@@ -11,8 +11,8 @@ A MERN Stack e-commerce watch website built as a 7-day development challenge.
 | Day 3 | Complete Cart & Wishlist Functionality      | Done        |
 | Day 4 | Complete Product Details & Cart Integration | Done        |
 | Day 5 | Authentication, Authorization & JWT         | Done        |
-| Day 6 | Checkout & Orders                           | In Progress |
-| Day 7 | Final Integration, Testing & Deployment     | Pending     |
+| Day 6 | Checkout & Orders                           | Done        |
+| Day 7 | Final Integration, Testing & Deployment     |In Progress  |
 
 ## 🛠️ Tech Stack
 
@@ -104,6 +104,33 @@ A MERN Stack e-commerce watch website built as a 7-day development challenge.
 * Protected /cart route
 * Redirect logged-out users to /login
 * Allow logged-in users to access protected pages
+
+### Day 6 - Checkout & Order Management
+* Checkout page
+* Shipping details form
+* Cart items displayed in checkout
+* Order summary and total amount calculation
+* Place Order functionality
+* Order MongoDB schema
+* User reference in orders
+* Product reference in orders
+* Order quantity and purchase price
+* Shipping address storage
+* Order status
+* Protected POST /order API using JWT
+* Create and save orders in MongoDB
+* Clear cart after successful order
+* My Orders API
+* Fetch only the logged-in user's orders
+* JWT authentication for My Orders
+* Populate product details using Mongoose
+* My Orders page
+* Display order ID and status
+* Display ordered products and quantities
+* Display shipping address
+* Display total order amount
+* Tested Order APIs using Postman
+* Tested Checkout and My Orders flow in the browser
 
 ## 🎯 Challenge Goal
 
