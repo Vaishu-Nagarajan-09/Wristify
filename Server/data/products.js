@@ -107,7 +107,7 @@ const products = [
         brand: "Titan",
         price: 8999,
         description: "Latest and Premium Watch",
-        image: "/images/watch-img 9.jpeg",
+        image: "/images/watch-img 8.jpeg",
         stock: 10,
         rating: 5
     },
@@ -117,7 +117,7 @@ const products = [
         brand: "Titan",
         price: 8999,
         description: "Latest and Premium Watch",
-        image: "/images/watch-img 8.jpeg",
+        image: "/images/watch-img 9.jpeg",
         stock: 10,
         rating: 5
     }

@@ -33,6 +33,13 @@ app.use('/products', productRouter);
 app.use('/users', userRouter);
 app.use('/orders', orderRouter);
 
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
