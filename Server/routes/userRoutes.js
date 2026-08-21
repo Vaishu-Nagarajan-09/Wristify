@@ -4,6 +4,7 @@ const router = express.Router();
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken');
 const authMiddleware = require('../middleware/authMiddleware');
+const adminMiddleware = require('../middleware/adminMiddleware');
 
 router.post('/register', async(req, res) => {
     try{
@@ -96,6 +97,14 @@ router.get('/profile', authMiddleware, async(req, res) => {
             email: user.email,
             role: user.role
         }
+    })
+})
+
+
+router.get('/admin-test',authMiddleware,adminMiddleware, async(req,res) => {
+    return res.status(200).json({
+        message: "Admin access Successful",
+        user: req.user
     })
 })
 

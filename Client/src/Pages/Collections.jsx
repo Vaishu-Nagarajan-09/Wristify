@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import axios from 'axios';
+import Navbar from "../components/Navbar";
 
 const Collections = () => {
 

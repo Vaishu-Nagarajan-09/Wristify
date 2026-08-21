@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Register = () => {
@@ -15,6 +15,8 @@ const Register = () => {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
 
+    const navigate = useNavigate();
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -22,11 +24,12 @@ const Register = () => {
         setSuccess("");
 
         try {
-            const response = await axios.post('http://localhost:3000/user/register', formData);
+            const response = await axios.post('http://localhost:3000/users/register', formData);
             console.log(response.data)
             setSuccess(response.data.message);
 
-            alert("Registration Successfully");
+            alert("Registration Successfully! Please Login..");
+            navigate('/login');
         }
         catch (e) {
             console.log(e.message);

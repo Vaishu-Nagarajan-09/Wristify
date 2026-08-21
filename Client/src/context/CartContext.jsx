@@ -28,8 +28,8 @@ const CartProvider = ({children}) => {
                 quantity: 1
             }
         ];
-        });
-    }
+        });  
+    };
 
     const removeFromCart = (product) => {
         setCart((prev) =>{

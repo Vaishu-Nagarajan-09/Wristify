@@ -45,7 +45,11 @@ const MyOrders = () => {
                 {error && <p className="text-danger text-center">{error}</p>}
 
                 {orders.length === 0 && !loading && (
-                    <p className="text-center">No Orders Found.</p>
+                    <div className="text-center py-5">
+                        <i className="bi bi-box-seam text-muted" style={{ fontSize: "50px" }} ></i>
+                        <h5 className="mt-3"> No Orders Found </h5>
+                        <p className="text-muted"> You haven't placed any orders yet. </p>
+                    </div>
                 )}
 
                 {orders.map((order) => (
@@ -54,20 +58,32 @@ const MyOrders = () => {
 
                             {/* Order Header */}
 
-                            <div className="d-flex justify-content-between align-items-center mb-3">
+                            <div className="d-flex flex-column flex-md-row justify-content-between gap-3">
                                 <div>
-                                    <h5 className="mb-1"> Order </h5>
+                                    <h5 className="mb-1"> Order Details </h5>
                                     <small className="text-muted"> ID: {order._id} </small>
+                                    <br />
+                                    <small className="text-muted">
+                                        Ordered on:{" "} {new Date(order.createdAt).toLocaleDateString()}
+                                    </small>
                                 </div>
 
-                                <span className="badge bg-warning text-dark"> {order.status} </span>
+                                <div>
+                                    <span className={`badge ${order.status === "Delivered" ? "bg-success"
+                                        : order.status === "Shipped" ? "bg-primary"
+                                            : order.status === "Confirmed" ? "bg-info text-dark"
+                                                : "bg-warning text-dark"}`} >
+                                        {order.status}
+                                    </span>
+                                </div>
                             </div>
 
                             <hr />
 
                             {/* Products */}
 
-                            <h6 className="mb-3"> Products </h6>
+                            <h6 className="mb-3"><i className="bi bi-box-seam me-2"></i> Products </h6>
+
                             {order.products.map((item, index) => (
                                 <div className="d-flex justify-content-between mb-3"
                                     key={item._id || index} >
@@ -79,8 +95,8 @@ const MyOrders = () => {
 
                                     </div>
 
-                                    <div> ₹ {item.price * item.quantity}
-                                    </div>
+                                    <strong> ₹ {item.price * item.quantity}</strong>
+
 
                                 </div>
 
@@ -90,25 +106,27 @@ const MyOrders = () => {
 
                             {/* Shipping Address */}
 
-                            <h6> Shipping Address </h6>
+                            <h6 className="mb-3"><i className="bi bi-geo-alt me-2"></i> Shipping Address </h6>
 
-                            <p className="mb-1"> {order.shippingAddress.name} </p>
-                            <p className="mb-1"> {order.shippingAddress.address} </p>
+                            <div>
+                                <p className="mb-1"> {order.shippingAddress.name} </p>
+                                <p className="mb-1"> {order.shippingAddress.address} </p>
 
-                            <p className="mb-1"> {order.shippingAddress.city},{" "}
-                                {order.shippingAddress.state} -{" "}
-                                {order.shippingAddress.pincode}
-                            </p>
+                                <p className="mb-1"> {order.shippingAddress.city},{" "}
+                                    {order.shippingAddress.state} -{" "}
+                                    {order.shippingAddress.pincode}
+                                </p>
 
-                            <p className="mb-3"> Email: {order.shippingAddress.email} </p>
+                                <p className="mb-0"> Email: {order.shippingAddress.email} </p>
 
+                            </div>
                             <hr />
 
                             {/* Total */}
 
                             <div className="d-flex justify-content-between align-items-center">
-                                <strong> Total Amount </strong>
-                                <strong> ₹ {order.totalAmount} </strong>
+                                <strong className="fw-semibold"> Total Amount </strong>
+                                <strong className="fw-bold fs-5"> ₹ {order.totalAmount} </strong>
                             </div>
                         </div>
                     </div>

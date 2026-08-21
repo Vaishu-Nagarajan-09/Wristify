@@ -11,7 +11,6 @@ const ConnectDB = require('./config/db');
 ConnectDB();
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var productRouter = require('./routes/productRoutes');
 const userRouter = require('./routes/userRoutes');
 const orderRouter = require('./routes/orderRoutes');

@@ -1,3 +1,5 @@
+
+
 const products = [
     {
         id: 1,
@@ -15,7 +17,7 @@ const products = [
         brand: "Carlonton",
         price: 6999,
         description: "Latest and Premium Watch",
-        image: "/images/watch-img 12.jpg",
+        image: "/images/watch-img 11.jpg",
         stock: 10,
         rating: 5
     },
@@ -25,7 +27,7 @@ const products = [
         brand: "Titan",
         price: 8999,
         description: "Latest and Premium Watch",
-        image: "/images/watch-img 12.jpg",
+        image: "/images/watch-img 13.jpg",
         stock: 10,
         rating: 5
     },
@@ -35,7 +37,7 @@ const products = [
         brand: "Titan",
         price: 8999,
         description: "Latest and Premium Watch",
-        image: "/images/watch-img 12.jpg",
+        image: "/images/watch-img 14.jpg",
         stock: 10,
         rating: 5
     },
@@ -45,7 +47,7 @@ const products = [
         brand: "Titan",
         price: 8999,
         description: "Latest and Premium Watch",
-        image: "/images/watch-img 12.jpg",
+        image: "/images/watch-img 15.jpg",
         stock: 10,
         rating: 5
     },
@@ -55,7 +57,7 @@ const products = [
         brand: "Titan",
         price: 8999,
         description: "Latest and Premium Watch",
-        image: "/images/watch-img 12.jpg",
+        image: "/images/watch-img 16.png",
         stock: 10,
         rating: 5
     },
@@ -65,7 +67,7 @@ const products = [
         brand: "Titan",
         price: 8999,
         description: "Latest and Premium Watch",
-        image: "/images/watch-img 12.jpg",
+        image: "/images/watch-img 17.jpg",
         stock: 10,
         rating: 5
     },
@@ -75,7 +77,7 @@ const products = [
         brand: "Titan",
         price: 8999,
         description: "Latest and Premium Watch",
-        image: "/images/watch-img 12.jpg",
+        image: "/images/watch-img 18.jpg",
         stock: 10,
         rating: 5
     },
@@ -85,7 +87,7 @@ const products = [
         brand: "Titan",
         price: 8999,
         description: "Latest and Premium Watch",
-        image: "/images/watch-img 12.jpg",
+        image: "/images/watch-img 19.jpg",
         stock: 10,
         rating: 5
     },
@@ -95,7 +97,7 @@ const products = [
         brand: "Titan",
         price: 8999,
         description: "Latest and Premium Watch",
-        image: "/images/watch-img 12.jpg",
+        image: "/images/watch-img 10.jpg",
         stock: 10,
         rating: 5,
     },
@@ -105,7 +107,7 @@ const products = [
         brand: "Titan",
         price: 8999,
         description: "Latest and Premium Watch",
-        image: "/images/watch-img 12.jpg",
+        image: "/images/watch-img 9.jpeg",
         stock: 10,
         rating: 5
     },
@@ -115,7 +117,7 @@ const products = [
         brand: "Titan",
         price: 8999,
         description: "Latest and Premium Watch",
-        image: "/images/watch-img 12.jpg",
+        image: "/images/watch-img 8.jpeg",
         stock: 10,
         rating: 5
     }

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { WishlistContext } from "../context/WishlistContext";
 import { CartContext } from "../context/CartContext";
 import { Link } from 'react-router-dom'
@@ -9,6 +9,9 @@ const ProductCard = ({ product, removeFromCart, increaseQuantity, decreaseQuanti
     const { wishlist, addToWishlist, removeWishlist } = useContext(WishlistContext);
 
     const { addToCart } = useContext(CartContext);
+
+    const [showToast, setShowToast] = useState(false);
+
 
     const handleWishlist = () => {
         if (isWishlist) {
@@ -23,6 +26,12 @@ const ProductCard = ({ product, removeFromCart, increaseQuantity, decreaseQuanti
 
     const handleAddToCart = () => {
         addToCart(product);
+
+        setShowToast(true);
+
+        setTimeout(() => {
+            setShowToast(false);
+        }, 2500);
     }
 
     return (
@@ -32,15 +41,15 @@ const ProductCard = ({ product, removeFromCart, increaseQuantity, decreaseQuanti
                     <div className="prod-wrapper">
 
                         <Link to={`/product/${product.id}`}>
-                        <img src={product.image} alt={product.name} className="prod-img" />
+                            <img src={product.image} alt={product.name} className="prod-img" />
                         </Link>
-                        
+
                         <i className={`bi ${isWishlist ? "bi-heart-fill" : "bi-heart"} wishlist-icon`}
                             onClick={handleWishlist}></i>
                     </div>
 
                     <Link to={`/product/${product.id}`}>
-                    <h3>{product.name}</h3>
+                        <h3>{product.name}</h3>
                     </Link>
                     <h5>{product.brand}</h5>
                     <p className="prod-desc">{product.description}</p>
@@ -62,17 +71,26 @@ const ProductCard = ({ product, removeFromCart, increaseQuantity, decreaseQuanti
                     </div>
                 )}
 
-                {/* only collection page show add to cart */}
-                 {!increaseQuantity && (
-                <button
-                    className="add-btn"
-                    onClick={handleAddToCart}
-                >
-                    Add to Cart
-                </button>
-            )}
 
-               {/* only cart page show remove icon */}
+
+                {/* only collection page show add to cart */}
+                {!increaseQuantity && (
+                    <>
+                    <button
+                        className="add-btn"
+                        onClick={handleAddToCart}
+                    >
+                        Add to Cart
+                    </button>
+                    {showToast && (
+                    <div className="cart-message">
+                        ✅ {product.name} added to cart!
+                    </div>
+                )}
+                </>
+                )}
+
+                {/* only cart page show remove icon */}
                 {removeFromCart && (
                     <button className="remove-btn" onClick={removeFromCart}>
                         <i className="bi bi-x-lg"></i>
@@ -80,6 +98,7 @@ const ProductCard = ({ product, removeFromCart, increaseQuantity, decreaseQuanti
                 )}
 
             </div>
+
         </>
     )
 }

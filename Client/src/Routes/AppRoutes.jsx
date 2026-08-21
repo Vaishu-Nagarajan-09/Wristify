@@ -10,18 +10,23 @@ import Login from "../pages/Login";
 import ProtectedRoute from "./ProtectedRoute";
 import Checkout from "../pages/Checkout";
 import MyOrders from "../pages/MyOrders";
+import AdminDashboard from "../pages/AdminDashboard";
+import AdminRoute from "./AdminRoute";
+import Contact from "../pages/Contact";
+import Navbar from "../components/Navbar";
 
 
 const AppRoutes = () => {
     return (
         <>
+         <Navbar/>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/collections" element={<Collections />} />
                 <Route path="/product/:id" element={<ProductDetails />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
-                
+
                 <Route path="/wishlist"
                     element={
                         <ProtectedRoute>
@@ -34,9 +39,17 @@ const AppRoutes = () => {
                             <Cart />
                         </ProtectedRoute>
                     } />
-                <Route path="/cart" element={<Cart/>} />
-                <Route path="/checkout" element={<Checkout/>} /> 
-                <Route path="/my-orders" element={<MyOrders/>} />
+
+                <Route path="/checkout" element={<Checkout />} />
+                <Route path="/my-orders" element={<MyOrders />} />
+
+                <Route path="/admin" element={
+                    <AdminRoute>
+                        <AdminDashboard />
+                    </AdminRoute>
+                } />
+
+                <Route path="/contact" element={<Contact/>} />
             </Routes>
         </>
     )
