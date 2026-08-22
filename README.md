@@ -25,6 +25,9 @@ A MERN Stack e-commerce watch website built as a 7-day development challenge.
 * Axios
 * Bootstrap
 * Git & GitHub
+* Netlify
+* Render
+* MongoDB Atlas
 
 ## 📌 Progress
 
@@ -131,6 +134,21 @@ A MERN Stack e-commerce watch website built as a 7-day development challenge.
 * Display total order amount
 * Tested Order APIs using Postman
 * Tested Checkout and My Orders flow in the browser
+
+### Day 7 - Final Integration, Testing & Deployment
+* Admin authentication & authorization
+* Admin dashboard
+* View all orders
+* Update order status
+* Product management
+* Add product
+* Edit product
+* Delete product
+* Add-to-cart feedback
+* Checkout success UI
+* My Orders UI
+* Contact page
+* Deployed Backend on Render and Frontend on Netlify
 
 ## 🎯 Challenge Goal
 
