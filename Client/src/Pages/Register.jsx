@@ -24,7 +24,7 @@ const Register = () => {
         setSuccess("");
 
         try {
-            const response = await axios.post(`${import.meta.env.VITE_API_URL}/users/regisster`, formData);
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/users/register`, formData);
             console.log(response.data)
             setSuccess(response.data.message);
 
