@@ -12,7 +12,7 @@ A MERN Stack e-commerce watch website built as a 7-day development challenge.
 | Day 4 | Complete Product Details & Cart Integration | Done        |
 | Day 5 | Authentication, Authorization & JWT         | Done        |
 | Day 6 | Checkout & Orders                           | Done        |
-| Day 7 | Final Integration, Testing & Deployment     |In Progress  |
+| Day 7 | Final Integration, Testing & Deployment     | Done        |
 
 ## 🛠️ Tech Stack
 
