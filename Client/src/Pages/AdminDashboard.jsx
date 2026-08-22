@@ -73,7 +73,7 @@ const AdminDashboard = () => {
             let response;
 
             if (editingProductId) {
-                response = await axios.put(`http://localhost:3000/products/admin/${editingProductId}`,
+                response = await axios.put(`${import.meta.env.VITE_API_URL}/products/admin/${editingProductId}`,
                     payload,
                     {
                         headers: {
@@ -82,7 +82,7 @@ const AdminDashboard = () => {
                     }
                 );
             } else {
-                response = await axios.post("http://localhost:3000/products/admin",
+                response = await axios.post(`${import.meta.env.VITE_API_URL}/products/admin`,
                     payload,
                     {
                         headers: {
@@ -126,7 +126,7 @@ const AdminDashboard = () => {
         try {
             const token = localStorage.getItem("token");
 
-            const response = await axios.get("http://localhost:3000/products/admin/all",
+            const response = await axios.get(`${import.meta.env.VITE_API_URL}/products/admin/all`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`
@@ -153,7 +153,7 @@ const AdminDashboard = () => {
             try {
                 const token = localStorage.getItem("token");
 
-                const response = await axios.get("http://localhost:3000/orders/admin/orders",
+                const response = await axios.get(`${import.meta.env.VITE_API_URL}/orders/admin/orders`,
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -180,7 +180,7 @@ const AdminDashboard = () => {
         try {
             const token = localStorage.getItem('token');
 
-            const response = await axios.patch(`http://localhost:3000/orders/admin/orders/${orderID}/status`,
+            const response = await axios.patch(`${import.meta.env.VITE_API_URL}/orders/admin/orders/${orderID}/status`,
                 {
                     status
                 },
@@ -218,7 +218,7 @@ const AdminDashboard = () => {
             const token = localStorage.getItem("token");
 
             await axios.delete(
-                `http://localhost:3000/products/admin/${productId}`,
+                `${import.meta.env.VITE_API_URL}/products/admin/${productId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${token}`

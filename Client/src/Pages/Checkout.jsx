@@ -48,7 +48,7 @@ const Checkout = () => {
                 price: product.price
             }));
 
-            const response = await axios.post("http://localhost:3000/orders",
+            const response = await axios.post(`${import.meta.env.VITE_API_URL}/orders`,
                 {
                     products,
                     shippingAddress: shippingData,
